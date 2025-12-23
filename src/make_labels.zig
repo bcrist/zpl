@@ -94,8 +94,8 @@ pub fn main() !void {
     try writer.flush();
 }
 
-const Printer = @import("printer.zig").Printer;
-const enumerate_printers = @import("printer.zig").enumerate_printers;
+const Printer = @import("printer").Printer;
+const enumerate_printers = @import("printer").enumerate_printers;
 
 const zpl = @import("zpl");
 const std = @import("std");

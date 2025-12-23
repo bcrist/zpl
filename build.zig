@@ -10,6 +10,12 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
 
+    const printer = b.addModule("printer", .{
+        .root_source_file = b.path("src/printer.zig"),
+        .target = target,
+        .optimize = optimize,
+    });
+
     const make_labels = b.addExecutable(.{
         .name = "make_labels",
         .root_module = b.createModule(.{
@@ -18,6 +24,7 @@ pub fn build(b: *std.Build) void {
             .optimize = optimize,
             .imports = &.{
                 .{ .name = "zpl", .module = zpl },
+                .{ .name = "printer", .module = printer },
             },
         }),
     });

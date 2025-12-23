@@ -1,6 +1,6 @@
 .{
     .name = .zpl,
-    .version = "0.0.1",
+    .version = "0.0.2",
     .minimum_zig_version = "0.15.2",
     .paths = .{""},
     .fingerprint = 0xcd1c6011312a2eee,
